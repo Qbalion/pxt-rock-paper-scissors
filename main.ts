@@ -24,7 +24,7 @@ function showMyHand () {
             . . . . .
             `)
     } else {
-        basic.showString("Shake your hand")
+        basic.showString("Shake")
     }
 }
 input.onGesture(Gesture.Shake, function () {
@@ -38,6 +38,14 @@ function showResult (my: number, other: number) {
         basic.showIcon(IconNames.Happy)
     } else if (result == 0) {
         basic.showIcon(IconNames.Surprised)
+    } else if (otherHand == 0) {
+        basic.showLeds(`
+            . # # # .
+            . . . # .
+            . . # . .
+            . . . . .
+            . . # . .
+            `)
     } else {
         basic.showIcon(IconNames.Sad)
     }
