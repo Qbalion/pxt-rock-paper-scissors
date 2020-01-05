@@ -28,9 +28,10 @@ function showMyHand () {
     }
 }
 input.onGesture(Gesture.Shake, function () {
+    basic.clearScreen()
     myHand = Math.randomRange(1, 3)
     radio.sendNumber(myHand)
-    basic.pause(1000)
+    basic.pause(500)
 })
 function showResult (my: number, other: number) {
     result = my - other
