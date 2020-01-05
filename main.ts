@@ -55,11 +55,12 @@ radio.onReceivedNumber(function (receivedNumber) {
     otherHand = receivedNumber
     basic.pause(200)
 })
-let otherHand = 0
 let result = 0
+let otherHand = 0
 let myHand = 0
 radio.setGroup(1)
 myHand = 0
+otherHand = 0
 basic.forever(function () {
     showMyHand()
     basic.pause(500)
